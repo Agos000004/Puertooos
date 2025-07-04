@@ -1,0 +1,188 @@
+body {
+    text-align: center;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #c947c2, #ffc5f1);
+    margin: 0;
+    padding: 0;
+    color: #000000; 
+    scroll-behavior: smooth;
+    font-size: 20px; 
+    line-height: 1.6; 
+    text-shadow: 1px 1px 3px rgba(255, 0, 212, 0.6); 
+    
+}
+p{
+    text-align: center;
+}
+
+header {
+    background-color: #860286;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    animation: slideDown 1s ease;
+}
+
+section {
+    margin: 20px auto;
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    margin-top: 0;
+    
+}
+
+.indice button {
+    display: block;
+    width: 100%;
+    background-color: #510058;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+
+.indice button:hover {
+    background-color: #4d002a;
+    transform: scale(1.03);
+}
+
+.imagenes-inicio img {
+    width: 45%;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, opacity 0.8s ease;
+    opacity: 0.9;
+     box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.imagenes-inicio img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(255, 0, 150, 0.5);
+}
+
+.respuesta {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #fae0f6;
+    border-left: 6px solid #943f62;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.respuesta.mostrar {
+    opacity: 1;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.tabla-puertos table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tabla-puertos th, .tabla-puertos td {
+    border: 1px solid #6f0079;
+    padding: 12px;
+    text-align: center;
+}
+
+.tabla-puertos th {
+    background-color: #6b0096;
+    color: white;
+    text-transform: uppercase;
+}
+
+.tabla-puertos tr:nth-child(even) {
+    background-color: #f8e0fa;
+}
+
+.tabla-puertos tr:hover {
+    background-color: #dfb2d2;
+    transition: background-color 0.3s ease;
+}
+
+.galeria-pasos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.paso {
+    text-align: center;
+    width: 900px !important;
+}
+
+.paso img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.paso img:hover {
+    transform: scale(1.03);
+}
+
+.paso h4 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+.tabla-puertoscomunes table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.tabla-puertoscomunes th, .tabla-puertoscomunes td {
+    border: 1px solid #6f0079;
+    padding: 12px;
+    text-align: center;
+}
+.tabla-puertoscomunes th {
+    background-color: #6b0096;
+    color: white;
+    text-transform: uppercase;
+}
+.tabla-puertoscomunes tr:nth-child(even) {
+    background-color: #f8e0fa;
+}
+
+.tabla-puertoscomunes tr:hover {
+    background-color: #dfb2d2;
+    transition: background-color 0.3s ease;
+}

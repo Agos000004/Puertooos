@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe - Explorador de Puertos</title>
+    <link rel="stylesheet" href="Scanner port .css">
+</head>
+<body>
+
+    <header>
+        <h1>Informe: El Explorador de Puertos</h1>
+        <p>Materia: Hardware III - E.E.T.P. N° 462</p>
+        <p>Integrantes: María Agostina Correa, Milagros Amarilla, Angelina Escobar</p>
+          <p>Profesor: Lucas Sanchez</p>
+
+    </header>
+
+    <section class="inicio fade-in">
+        <h2>Inicio</h2>
+        <p>Este informe tiene como objetivo comprender qué son los puertos de red, cómo identificar puertos abiertos, cómo protegerlos y qué riesgos pueden implicar si no están correctamente configurados.
+
+</p>
+
+        <div class="imagenes-inicio">
+            <img src="Imágenes puertos/Puertos.jpg" alt="Pantalla con escaneo de puertos">
+            <img src="Imágenes puertos/puertos 2.jpg" alt="Computadora protegida escaneo">
+        </div>
+    </section>
+
+    <section class="indice">
+        <h2>Índice de Preguntas</h2>
+        <button onclick="mostrarRespuesta('r1')">2.1 ¿Qué puertos están abiertos?</button>
+        <button onclick="mostrarRespuesta('r2')">2.2 ¿Corresponden a los programas que tienen abiertos?</button>
+        <button onclick="mostrarRespuesta('r3')">2.3 ¿Qué significa que un puerto esté abierto?</button>
+        <button onclick="mostrarRespuesta('r4')">2.4 ¿Qué pasa si cierran el navegador o el programa de chat y vuelven a escanear?</button>
+        <button onclick="mostrarRespuesta('r5')">3.1 ¿Por qué es importante que un puerto esté abierto para que un servicio funcione?</button>
+        <button onclick="mostrarRespuesta('r6')">3.2 ¿Por qué no todos los puertos están abiertos?</button>
+        <button onclick="mostrarRespuesta('r7')">3.3 Si un firewall está activo, ¿qué efecto tiene en el escaneo?</button>
+        <button onclick="mostrarRespuesta('rinv')">Investigación: Lista de puertos comunes y sus servicios</button>
+        <button onclick="mostrarRespuesta('r8')">4.1 ¿Por qué un atacante querría escanear puertos?</button>
+        <button onclick="mostrarRespuesta('r9')">4.2 ¿Qué implicaciones de seguridad tiene tener el puerto 80 abierto?</button>
+        <button onclick="mostrarRespuesta('r10')">4.3 ¿Qué hardware o software ayuda a cerrar o filtrar puertos no deseados?</button>
+    </section>
+
+    <section class="respuestas">
+        
+        <div id="r1" class="respuesta fade-in">
+            <h3>2.1 ¿Qué puertos están abiertos?</h3>
+            <p>Los puertos que se encuentran abiertos en el ordenador que estamos utilizando para realizar este análisis son: 
+<br>
+-Puerto 135
+<br>
+-Puerto 139
+<br>
+-Puerto 445 
+<br>
+-Puerto 5357
+</p>
+   <img src="Imágenes puertos/Captura de pantalla (219).png" alt="Puertos captura">
+
+        </div>
+
+        <div id="r2" class="respuesta fade-in">
+            <h3>2.2 ¿Corresponden a los programas que tienen abiertos?</h3>
+            <p>Sí, los puertos abiertos corresponden a los programas abiertos, ya que normalmente están vinculados a programas que están siendo ejecutados.
+                En este caso, todos los puertos nombrados pertenecen a servicios brindados por el sistema operativo Windows. 
+
+            </p>
+            <section class="tabla-puertos">
+    <h2>Puertos y Servicios de Windows</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Puerto</th>
+                <th>Servicio</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>135</td>
+                <td>EPMAP (RPC)</td>
+                <td>Gestión de conexiones remotas (DCOM, RPC).</td>
+            </tr>
+            <tr>
+                <td>139</td>
+                <td>NetBIOS-SSN</td>
+                <td>Compartición de archivos en redes locales antiguas.</td>
+            </tr>
+            <tr>
+                <td>445</td>
+                <td>Microsoft-DS (SMB)</td>
+                <td>Compartición de archivos e impresoras en redes modernas.</td>
+            </tr>
+            <tr>
+                <td>5357</td>
+                <td>WSD</td>
+                <td>Detección automática de dispositivos como impresoras en red.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+        </div>
+
+          <div id="r3" class="respuesta fade-in">
+            <h3>2.3 ¿Qué significa que un puerto esté abierto?</h3>
+            <p>Cuando un puerto está abierto, significa que hay un servicio o programa en tu computadora que está escuchando conexiones externas a través de ese puerto.
+                <br>
+                Peligros: Si se encuentran puertos abiertos sin saberlo, puede ser peligroso ya que los atacantes pueden intentar entrar por ellos a través de vulnerabilidades conocidas.
+                <br>
+                Ejemplos de ataques a través de puertos abiertos: 
+                <br>
+                -Ransomware: 
+                <br>
+                -Blaster Worm
+                <br>
+                -NotPenya
+                <br>
+                <br>
+                <h3>Ransomware</h3>
+                Es un tipo de malware que cifra los datos de una víctima, impidiéndole acceder a sus archivos o sistemas hasta que se pague un rescate.
+                <br>
+                <br>
+               Una de las variantes más significativas de ransomware fue "WannaCry", el cual se propagó rápidamente en mayo de 2017 aprovechando una vulnerabilidad en Windows. Se difundió a través de redes y causó interrupciones generalizadas, afectando a muchas empresas y a usuarios individuales.
+            </p>
+               <br>
+               <br>
+        <img src="Imágenes puertos/ransomware.png" alt=""  width="1000" height="500"  style="display: block; margin: 0 auto;">
+                <br>
+               <br>
+               <h3>
+                  Blaster Worm
+                  </h3>
+                  <br>
+                  <p>
+                  El gusano se replica a sí mismo y se propaga a otras computadoras conectadas a la misma red, aprovechando vulnerabilidades en el servicio DCOM (Modelo de Objetos Componentes Distribuidos) de Microsoft para infectar computadoras que ejecutan sistemas operativos Windows XP y Windows 2000. 
+</p>
+               <img src="Imágenes puertos/blaster worm.jpg" alt=""  width="1000" height="500"  style="display: block; margin: 0 auto;">
+               <br>
+            <h3>NotPenya</h3>
+               <br>
+               <br>
+<p></p>
+        
+            
+
+          </div>
+
+            <div id="r4" class="respuesta fade-in">
+            <h3>2.4 ¿Qué pasa si cierran el navegador o el programa de chat y vuelven a escanear?</h3>
+            <p>En este caso, debido a que los puertos pertenecen a servicios de Windows, no es posible cerrar los programas o aplicaciones directamente. Si se desea cerrar un puerto determinado, se deberá acceder al panel de control y desactivar el puerto deseado. 
+                Para esto se deberá realizar una serie de pasos. Los pasos a seguir son los siguientes: 
+                <div class="galeria-pasos">
+    <div class="paso">
+        <h4>Paso 1</h4>
+        <img src="Imágenes puertos/captura 1.png" alt="Paso 1">
+    </div>
+    <div class="paso">
+        <h4>Paso 2</h4>
+        <img src="Imágenes puertos/2.png" alt="Paso 2">
+    </div>
+    <div class="paso">
+        <h4>Paso 3</h4>
+        <img src="Imágenes puertos/3.png" alt="Paso 3">
+    </div>
+    <div class="paso">
+        <h4>Paso 4</h4>
+        <img src="Imágenes puertos/4.png" alt="Paso 4">
+    </div>
+    <div class="paso">
+        <h4>Paso 5</h4>
+        <img src="Imágenes puertos/5.png" alt="Paso 5">
+    </div>
+    <div class="paso">
+        <h4>Paso 6</h4>
+        <img src="Imágenes puertos/6.png" alt="Paso 6">
+    </div>
+    <div class="paso">
+        <h4>Paso 7</h4>
+        <img src="Imágenes puertos/7.png" alt="Paso 7">
+    </div>
+    <div class="paso">
+        <h4>Paso 8</h4>
+        <img src="Imágenes puertos/8.png" alt="Paso 8">
+ </div> 
+                </div>
+                
+</div>
+
+
+<div id="r5" class="respuesta fade-in">
+    <h3>3.1 ¿Por qué es importante que un puerto esté abierto para que un servicio funcione?</h3>
+    <p>
+        Cuando una computadora o servidor ofrece un servicio (como una página web, un servidor de archivos),
+        necesita una forma de comunicarse con otros dispositivos que quieren usar ese servicio. 
+        Si el puerto está cerrado, los datos que llegan desde Internet o desde otra computadora no pueden entrar.
+        Es como si hubiera una pared bloqueando esa puerta.
+    </p>
+      <img src="Imágenes puertos/Crear-una-pagina-Web-2 (1).jpg" alt=""  width="500" height="500"  style="display: block; margin: 0 auto;">
+</div>
+
+<div id="r6" class="respuesta fade-in">
+    <h3>3.2 ¿Por qué no todos los puertos están abiertos?</h3>
+    <p> Si todos los puertos estuvieran abiertos, sería muy fácil para atacantes entrar a la computadora o red y causar problemas, como robar información o controlar el sistema.
+        Por eso, los sistemas operativos mantienen la mayoría de los puertos cerrados o filtrados para proteger la seguridad. Solo abren los puertos necesarios para los servicios que realmente se usan, como un servidor web (puerto 80) o un servidor de correo (puerto 25).
+
+    </p>
+    <img src="Imágenes puertos/servidor web.jpg" alt=""  width="1000" height="500"  style="display: block; margin: 0 auto;">
+
+</div>
+
+<div id="r7" class="respuesta fade-in">
+    <h3>3.3 Si un firewall está activo, ¿qué efecto tiene en el escaneo?</h3>
+    <p>Un firewall actúa como una barrera de seguridad entre tu computadora y el exterior. Cuando está activo, controla qué conexiones entrantes o salientes se permiten o bloquean.
+
+Por eso, si hacés un escaneo de puertos con un firewall activo, muchos puertos pueden aparecer como cerrados o filtrados, aunque realmente haya servicios escuchando en ellos. Esto sucede porque el firewall bloquea o no responde a las solicitudes del escáner para proteger el sistema.
+
+En resumen, un firewall puede ocultar puertos abiertos, dificultando que un atacante vea qué servicios están disponibles en tu equipo.</p>
+<img src="Imágenes puertos/firewall.jpg" alt=""  width="1000" height="500"  style="display: block; margin: 0 auto;">
+</div>
+<div id="rinv" class="respuesta fade-in">
+    <h3>Investigación: Lista de puertos comunes y sus servicios</h3>
+     <section class="tabla-puertoscomunes">
+    <h2>Puertos comunes y sus servicios</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Puerto</th>
+                <th>Servicio</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>21</td>
+                <td>FTP</td>
+                <td>Protocolo de transferencia de archivos. Se usa para subir o descargar archivos de un servidor.</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>SSH</td>
+                <td>Protocolo seguro para acceder a sistemas remotamente mediante consola (línea de comandos).
+                </td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>Telnet</td>
+                <td>Similar a SSH, pero inseguro porque no cifra los datos. Ya casi no se usa.</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>SMTP</td>
+                <td>Se utiliza para enviar correos electrónicos desde un servidor a otro.</td>
+            </tr>
+             <tr>
+                <td>80</td>
+                <td>HTTP</td>
+                <td>Protocolo básico para navegar por páginas web (no cifrado).</td>
+            </tr>
+            <tr>
+                <td>443</td>
+                <td>HTTPS</td>
+                <td>Versión segura de HTTP, con cifrado para proteger la información.</td>
+            </tr>
+            <tr>
+                <td>3389</td>
+                <td>RDP</td>
+                <td>Protocolo de escritorio remoto. Permite controlar otra computadora a distancia, como si estuvieras frente a ella.
+                    Si dicho puerto está abierto sin protección adecuada, un atacante podría intentar acceder remotamente a tu PC.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+</div>
+    
+    <div id="r8" class="respuesta fade-in">
+        <h3>4.1 ¿Por qué un atacante querría escanear puertos?</h3>
+        <p>Un atacante escanea puertos para descubrir qué servicios o programas están activos en una computadora o red. Esto es importante porque cada servicio abierto puede tener vulnerabilidades o fallas que el atacante puede aprovechar para entrar al sistema.
+
+Al saber qué puertos están abiertos, el atacante puede planear ataques específicos, como intentar entrar por un puerto que tiene una versión antigua o mal protegida de un programa.
+
+</p>
+<img src="Imágenes puertos/hacker.jpg" alt=""  width="800" height="500"  style="display: block; margin: 0 auto;">
+    </div>
+    <div id="r9" class="respuesta fade-in">
+        <h3>4.2 Si tienes un servidor web en tu máquina (puerto 80) y está abierto, ¿qué
+implicaciones de seguridad tiene?</h3>
+<p>Tener el puerto 80 abierto significa que estás ejecutando un servidor web en tu computadora, accesible para cualquiera desde internet o desde la red local.
+
+Esto puede ser un riesgo si el servidor web tiene vulnerabilidades o no está bien configurado. Los atacantes pueden intentar explotar errores del servidor y acceder a datos privados.
+
+Por eso, si el puerto 80 está abierto, es muy importante:
+<br>
+◉ Mantener el servidor web actualizado.
+<br>
+
+◉ Usar contraseñas seguras.
+<br>
+◉ Configurar correctamente los permisos.
+<br>
+◉ Implementar medidas de seguridad como firewalls o sistemas de detección de intrusos.
+<br>
+</p>
+<img src="Imágenes puertos/servidor.jpg" alt=""  width="1000" height="500"  style="display: block; margin: 0 auto;">
+
+    </div>
+    <div id="r10" class="respuesta fade-in">
+        <h3>4.3 ¿Qué hardware o software ayuda a 'cerrar' o 'filtrar' puertos no deseados?</h3>
+        <p>Los firewalls son las principales herramientas que permiten cerrar o filtrar puertos no deseados y así proteger una computadora o red de posibles ataques.
+<br>
+<br>
+Existen dos tipos principales de firewalls:
+<br>
+<br>
+◉ Firewall de Software:
+Son programas instalados en la computadora o servidor. Permiten controlar qué conexiones se permiten y cuáles se bloquean. Ejemplos conocidos son: Windows Defender Firewall, ZoneAlarm o Comodo Firewall.
+<br>
+<br>
+◉ Firewall de Hardware:
+Son dispositivos físicos que se colocan entre la red interna y el internet. Protegen toda una red de computadoras filtrando el tráfico antes de que llegue a los dispositivos. Algunos ejemplos son: routers con firewall incorporado, Cisco ASA o equipos Fortinet.</p>
+     <div class="galeria-firewall">
+    <div class="firewall">
+        <h4>Windows Defender</h4>
+        <img src="Imágenes puertos/windows-defender-prestigia-seguridad.png" alt="WD" style="display: block; margin: 0 auto;">
+    </div>
+    <div class="Comodo Firewall">
+        <h4>Comodo Firewall</h4>
+        <img src="Imágenes puertos/comodo firewall.jpg" alt="CF" width="1000" height="1000"  style="display: block; margin: 0 auto;">
+    </div>
+    <div class="Cisco ASA">
+        <h4>Cisco ASA</h4>
+        <img src="Imágenes puertos/Cisco ASA.jpg" alt="CiscoASA" width="500" height="500"  style="display: block; margin: 0 auto;" >
+    </div>
+    <div class="Equipos Fortinet">
+        <h4>Equipos Fortinet</h4>
+        <img src="Imágenes puertos/fortinet-.png" alt="Fortinet" width="500" height="500"  style="display: block; margin: 0 auto;" >
+    </div>
+</div>
+
+    </section>
+    
+
+    <script>
+        function mostrarRespuesta(id) {
+            const respuestas = document.querySelectorAll('.respuesta');
+            respuestas.forEach(r => r.style.display = 'none');
+
+            const target = document.getElementById(id);
+            target.style.display = 'block';
+            target.classList.add('mostrar');
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+
+</html>
